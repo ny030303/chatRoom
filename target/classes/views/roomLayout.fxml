@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" styleClass="romePane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.RoomController">
+   <children>
+      <HBox layoutY="650.0" prefHeight="53.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: rgba(0,0,0,0.6);">
+         <children>
+            <TextField fx:id="roomInput" prefHeight="36.0" prefWidth="451.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="sendBtn" mnemonicParsing="false" onMouseClicked="#sendText" prefHeight="34.0" prefWidth="88.0" text="전송" />
+         </children>
+         <padding>
+            <Insets left="12.0" right="12.0" top="9.0" />
+         </padding></HBox>
+      <HBox prefHeight="53.0" prefWidth="600.0" spacing="349.0" style="-fx-background-color: rgba(0,0,0,0.6);">
+         <children>
+            <Label fx:id="roomTitle" text="제목 들어갈 곳" textFill="#f2f2f2">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="43.0" prefWidth="74.0" spacing="7.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#getOutRoom" text="나가기">
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding></HBox>
+      <ScrollPane layoutX="34.0" layoutY="69.0" prefHeight="564.0" prefWidth="532.0">
+         <content>
+            <VBox fx:id="chatBox" prefHeight="558.0" prefWidth="522.0" spacing="20.0" style="-fx-background-color: rgba(0,0,0,0);">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
